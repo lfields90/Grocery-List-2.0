@@ -1,0 +1,24 @@
+
+h1 {
+	color: #d7ceb2;
+	text-shadow: 3px 2px black;
+	font: 60px 'BazarMedium';
+}
+
+body  {
+    background-image: url("http://media.wholefoodsmarket.com/images/sized/e8bbeaca67adc8575d81fedb188009c36f472241.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #cccccc;
+
+}
+
+.button {
+  background-color: black;
+  color: #d7ceb2
+}
+
+
+table {
+	opacity: .95;
+}

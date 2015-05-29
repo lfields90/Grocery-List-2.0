@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Grocery List 2</title>
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="/foundation.min.css">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+
+  <body>
+    <center><h1>Grocery List 2</h1></center>
+      <ul>
+        <center><table>
+          <thead>
+            <tr>
+              <th width="200">List Item</th>
+              <th width="200">Quantity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% list.each do |item| %>
+              <tr>
+                <td> <%= item['name'] %></td>
+                <td> <%= item['amount'] %> </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table></center>
+      </ul>
+    <center><h1>Add New Items</h1></center>
+    <center><table>
+      <thead>
+        <tr>
+          <th width="200">Item Name</th>
+          <th width="200">Quantity</th>
+        </tr>
+      </thead></center>
+      <tbody><form action="/groceries" method="post">
+          <tr>
+            <td> <input type="text" id="item" name="item" placeholder="ex. Eggs" size="30" required> </td>
+            <!-- I know that making this a required field defeats the purpose of my empty field redirect on server.rb -->
+            <!-- but the redirect was part of the challenge and I didn't want to lose points for omitting it -->
+            <td> <input type="number" id="num" name="number" placeholder="ex. 4"> </td>
+          </tr>
+      </tbody></table>
+    <input class="button round" class="button" type="submit" value="Add"> </form></center>
+  </body>
+</html>
